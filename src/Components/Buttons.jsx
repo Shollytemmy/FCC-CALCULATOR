@@ -4,7 +4,7 @@ export const Buttons = ({keys}) => {
   return (
     <>
     {
-        keys.map((key, idx) => <button key={idx} className="btn__single">{key}</button>)
+        keys.map((key, idx) => <button key={idx} className={`btn__single btn-${idx}`}>{key}</button>)
     }
     </>
   )
