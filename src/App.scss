@@ -1,0 +1,42 @@
+$body: #c2c2d6;
+
+
+
+
+body{
+    background-color: $body;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .App {
+      
+        width: 80%;
+        
+        border: 2px solid red;
+        display: flex;
+            justify-content: center;
+
+            .calculator{
+                border: 1px solid pink;
+                width: 334px;
+                height: 394px;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+
+                button.btn__single:first-of-type{
+                    grid-column: 1 /span 2;
+                }
+
+            }
+
+      
+   
+        
+      
+    }
+
+    
+
+}

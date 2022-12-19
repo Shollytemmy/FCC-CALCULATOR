@@ -1,8 +1,11 @@
 import React from 'react'
+import { Buttons } from './Buttons'
 
 const Calculator = ({keys}) => {
   return (
-    <div>{keys}</div>
+    <div className='calculator'>
+        <Buttons keys ={keys} />
+    </div>
   )
 }
 
