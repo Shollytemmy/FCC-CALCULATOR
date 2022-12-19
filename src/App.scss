@@ -1,4 +1,6 @@
 $body: #c2c2d6;
+$clear: rgb(172, 57, 57);
+$equal: rgb(0, 68, 102);
 
 
 
@@ -12,10 +14,12 @@ body{
 
     .App {
       
-        width: 80%;
+        width: 100%;
+        max-width: 334px;
         
         border: 2px solid red;
         display: flex;
+        flex-direction: column;
             justify-content: center;
 
             .calculator{
@@ -25,9 +29,26 @@ body{
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
 
+                .btn__single{
+                    // border: none;
+                }
+
                 button.btn__single:first-of-type{
                     grid-column: 1 /span 2;
+                    background-color: $clear;
+                    border: none
                 }
+
+                                 button.btn__single:nth-child(15) {
+                                     grid-row-end: span 2  ;
+                                     background-color: $equal;
+                                    border: none
+                                 }
+
+                                button.btn__single:nth-child(16) {
+                                    grid-column: 1 /span 2;
+                                    border: none
+                                }
 
             }
 

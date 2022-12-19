@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.scss'
 import Calculator from './Components/Calculator'
+import { Display } from './Components/Display'
 
 
 
@@ -31,7 +32,7 @@ function App() {
 
   return (
     <div className="App">
-      
+      <Display />
       <Calculator keys={keys} />
       
     </div>
