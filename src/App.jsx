@@ -28,11 +28,11 @@ const keys = [
 ]
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [outPut, setOutPut] = useState(0)
 
   return (
     <div className="App">
-      <Display />
+      <Display outPut={outPut} setOutPut={setOutPut} />
       <Calculator keys={keys} />
       
     </div>
