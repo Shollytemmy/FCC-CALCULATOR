@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
+
 $body: #c2c2d6;
 $clear: rgb(172, 57, 57);
 $equal: rgb(0, 68, 102);
 $left-operators: (102, 102, 102);
+
+
+
+
 
 
 
@@ -13,30 +20,44 @@ body{
     align-items: center;
     height: 100vh;
 
+    font-family: 'Share Tech', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+
     .App {
       
         width: 100%;
         max-width: 334px;
         box-sizing: border-box;
-        border: 2px solid red;
+        border: 0px solid red;
         display: flex;
         flex-direction: column;
             justify-content: center;
+            // box-shadow: 5px 5px;
+           
+
 
             .calculator{
-                border: 1px solid pink;
+                border: 0px solid pink;
                 width: 334px;
                 height: 394px;
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
-                gap: 1px;
+                // gap: 0rem;
                 background-color: rgb(0, 0, 0);
                 box-sizing: border-box;
+                font-family: 'Share Tech', sans-serif;
+                border: 10px solid #000;
+                
 
                 .btn__single{
                     border: none;
                     cursor: pointer;
                     outline: 1px solid #000;
+                    color: #fff;
+                    font-family: 'Share Tech', sans-serif;
+                    font-size: 20px;
+                    font-weight: 400;
                     
                     &:hover{
                         transform: scaleY(1.1);
@@ -51,7 +72,7 @@ body{
                 }
 
                 button.btn__single:nth-child(15) {
-                grid-row-end: span 2  ;
+                grid-row-end: span 2;
                 background-color: $equal;
                 border: none
                 }
