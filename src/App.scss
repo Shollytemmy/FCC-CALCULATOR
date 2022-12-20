@@ -1,6 +1,7 @@
 $body: #c2c2d6;
 $clear: rgb(172, 57, 57);
 $equal: rgb(0, 68, 102);
+$left-operators: (102, 102, 102);
 
 
 
@@ -38,7 +39,7 @@ body{
                     outline: 1px solid #000;
                     
                     &:hover{
-                        transform: scaleY(1.2);
+                        transform: scaleY(1.1);
                         outline: 1px solid #fff;
                     }
                 }
