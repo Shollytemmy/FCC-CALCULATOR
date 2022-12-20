@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+
 import './App.scss'
 import Calculator from './Components/Calculator'
 import { Display } from './Components/Display'
@@ -33,37 +33,31 @@ function App() {
   const handleClick = (key) => {
 
     if(key === "="){
-     return  calculate()
+      calculate()
+     return
+       
+
     } else if(key === "AC"){
-     return setToZero()
-    } else{
-     return setOutPut(outPut + key)
+      setToZero()
+     return 
+
+    } else if(outPut === "0"){
+      setOutPut(key)
+      return 
+    }
+    else{
+      setOutPut(outPut  + key)
+     return 
     }
   };
 
 
   const calculate = () => {
-    let initialOutPut = ''
-
-    if(outPut.includes("--")){
-     initialOutPut = outPut.replace("--", "+")
-
-     return initialOutPut
-
-    } else{
-      initialOutPut = outPut
-    }
-
-    try {
-      setOutPut(eval(initialOutPut))
-      
-    } catch (error) {
-      setOutPut("0")
-      
-    }
+    setOutPut(eval(outPut))
+    
   }
   const setToZero = () => {
-    setOutPut(0)
+    setOutPut("0")
   }
 
   return (
