@@ -4,7 +4,7 @@
 $body: #c2c2d6;
 $clear: rgb(172, 57, 57);
 $equal: rgb(0, 68, 102);
-$left-operators: (102, 102, 102);
+$left-operators: rgb(102, 102, 102);
 
 
 
@@ -61,7 +61,8 @@ body{
                     
                     &:hover{
                         transform: scaleY(1.1);
-                        outline: 1px solid #fff;
+                        outline: 1px solid gray;
+                        color: #000;
                     }
                 }
 
@@ -82,12 +83,18 @@ body{
                 border: none
                 }
 
+                button.btn__single:nth-child(2),
+                button.btn__single:nth-child(3),
+                button.btn__single:nth-child(7),
+                button.btn__single:nth-child(11){
+                    background-color: $left-operators;
+
+                    
+                } 
+
             }
 
             @for $i from 3 through 16 {
-                @if $i == 6{
-                    background-color: red;
-                }
                 .btn-#{$i}{
                     background-color: #4d4d4d;
                 }
