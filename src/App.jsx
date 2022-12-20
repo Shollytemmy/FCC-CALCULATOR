@@ -34,20 +34,20 @@ function App() {
 
     if(key === "="){
       calculate()
-     return
+     
        
 
     } else if(key === "AC"){
       setToZero()
-     return 
+    
 
     } else if(outPut === "0"){
       setOutPut(key)
-      return 
+      
     }
     else{
       setOutPut(outPut  + key)
-     return 
+     
     }
   };
 
